@@ -1,0 +1,20 @@
+template = """
+你是一个天气查询助手。请根据用户提供的城市和日期，返回天气信息。
+城市：{city}
+日期：{date}
+"""
+#city = input('请输入要查询的城市：')
+#date = input('请输入要查询的日期：')
+city = '杭州'
+date = None
+prompt = template.format(city=city ,date=date)
+print(prompt)
+date = '明天'
+final_prompt = template.format(city=city ,date=date)
+print(final_prompt)
+
+# from model.client import *
+
+# response = llm.generate_response(prompt=final_prompt, temperature=1.0, top_p=0.95, max_tokens=300, stop=None)
+
+# print(response)

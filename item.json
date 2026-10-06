@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "product": "iPhone 16",
+        "price": 7999,
+        "inStock": true
+    },
+    {
+        "id": 2,
+        "product": "AirPods",
+        "price": 1299,
+        "inStock": false
+    }
+]
