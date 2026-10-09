@@ -1,0 +1,26 @@
+{
+    "answer": "根据提供的论文内容，机器翻译测试/开发数据集中的“冗余比”（redundancy ratio）被定义为：数据集中所有源语-目标语片段对（source-target pairs）的数量与唯一源语-目标语片段对数量之比。也就是说，redundancy = 全部 source-target pairs / 去重后的 source-target pairs。若所有片段对都唯一，则比值为1；比值越高，说明重复的片段对越多。论文在描述发布数据集的冗余时再次采用同一口径，即“number of all source-target pairs over number of unique source-target pairs”，并用 Table 2 展示。该指标用于衡量数据集的重复程度，论文也在数据选择阶段通过多种指标降低冗余，并在 Figure 4 中比较全部数据与所选数据的冗余比。需要注意，候选0还提到一个名称相近但方向相反的“Document redundancy ratio”：它定义为文档中唯一平行片段占全部平行片段的比例，用于标记含重复的文档，这与整体数据集的 redundancy ratio 不同。此外，上下文对语言对冗余趋势的描述存在“全部可用数据”与“发布/选定数据集”的差异：候选0称 ENHI、ENID 因文档少、重叠少而冗余较低，候选1则称发布数据集中 ENHI、ENID 冗余更高，这应结合不同数据范围理解。",
+    "sources": [
+        {
+            "title": "A Parallel Evaluation Data Set of Software Documentation with Document Structure Annotation",
+            "arxiv_id": "unknown",
+            "chunk_index": 0
+        },
+        {
+            "title": "A Parallel Evaluation Data Set of Software Documentation with Document Structure Annotation",
+            "arxiv_id": "unknown",
+            "chunk_index": 1
+        },
+        {
+            "title": "A Parallel Evaluation Data Set of Software Documentation with Document Structure Annotation",
+            "arxiv_id": "unknown",
+            "chunk_index": 2
+        },
+        {
+            "title": "A Parallel Evaluation Data Set of Software Documentation with Document Structure Annotation",
+            "arxiv_id": "unknown",
+            "chunk_index": 3
+        }
+    ],
+    "confidence": "high"
+}
