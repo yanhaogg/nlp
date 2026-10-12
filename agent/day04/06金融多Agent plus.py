@@ -44,7 +44,7 @@ researcher = Agent(
         "你输出的研究素材以结构清晰、颗粒度适中著称，深受写作团队信赖。"
     ),
     tools=[wikipedia_search],
-    llm=LLM(model="deepseek-v4-flash"),
+    llm=LLM(model="deepseek-flash", api_key=os.getenv("DS_API_KEY"), base_url=os.getenv("DS_API_BASE")),
     verbose=True,
 )
 
@@ -61,7 +61,7 @@ writer = Agent(
         "你的写作纪律是：只使用上游研究素材中的事实，字数严格受控，"
         "开头必须点题，结尾必须给出前瞻性判断，全文避免空洞的套话。"
     ),
-    llm=LLM(model="deepseek-v4-flash", temperature=1.2, top_p=0.92),
+    llm=LLM(model="deepseek-flash", api_key=os.getenv("DS_API_KEY"), base_url=os.getenv("DS_API_BASE"), temperature=1.2, top_p=0.92),
     verbose=True,
 )
 
@@ -78,7 +78,7 @@ validator = Agent(
         "你的审校方法论是『逐句核对、有据修改、留痕可查』：每一处改动都必须给出修改前原文、"
         "修改后文本和修改理由三要素；对于无需修改的部分，你会明确说明『保持原文』，绝不为改而改。"
     ),
-    llm=LLM(model="deepseek-v4-flash", temperature=0.2, top_p=0.6),
+    llm=LLM(model="deepseek-flash", api_key=os.getenv("DS_API_KEY"), base_url=os.getenv("DS_API_BASE"), temperature=0.2, top_p=0.6),
     verbose=True,
 )
 
